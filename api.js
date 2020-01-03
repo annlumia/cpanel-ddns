@@ -10,7 +10,7 @@ let cookies;
 module.exports = {
   getMyIP() {
     return axios({
-      url: 'https://www.sman8purworejo.sch.id/my-ip/',
+      url: 'https://www.gamanlab.com/public-ip/',
       method: 'get'
     })
   },
