@@ -5,7 +5,6 @@ const config = require("./config");
 
 async function updateDNS() {
 
-  api.init(config.CPANEL_BASEURL)
   const { security_token } = await api.login(config.CPANEL_USER, config.CPANEL_PWD)
   const payload = await api.fetchZone(security_token, config.DOMAIN)
 
@@ -35,6 +34,7 @@ async function updateDNS() {
 }
 
 
+api.init(config.CPANEL_BASEURL)
 updateDNS()
 
 schedule.scheduleJob(config.UPDATE_SCHEDULE, () => {

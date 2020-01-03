@@ -22,7 +22,7 @@ module.exports = {
 
     axios.interceptors.response.use(
       function(response) {
-        if (response.headers["set-cookie"]) {
+        if (response && response.headers && response.headers["set-cookie"]) {
           cookies = response.headers["set-cookie"];
         }
         return response.data;
