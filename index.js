@@ -1,9 +1,9 @@
+const schedule = require('node-schedule')
 
 const api = require('./api')
 const config = require("./config");
 
-
-async function main() {
+async function updateDNS() {
 
   api.init(config.CPANEL_BASEURL)
   const { security_token } = await api.login(config.CPANEL_USER, config.CPANEL_PWD)
@@ -34,4 +34,9 @@ async function main() {
   }
 }
 
-main();
+
+updateDNS()
+
+schedule.scheduleJob(config.UPDATE_SCHEDULE, () => {
+  updateDNS()
+})

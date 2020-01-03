@@ -11,6 +11,6 @@ module.exports = {
   /** your_domain.com */
   DOMAIN: 'your_domain.com',
   /** subdomain.your_domain.com */
-  SUBDOMAIN: 'subdomain.your_domain.com'
-
+  SUBDOMAIN: 'subdomain.your_domain.com',
+  UPDATE_SCHEDULE: '*/10 * * * *'
 }
