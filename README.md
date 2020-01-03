@@ -22,3 +22,5 @@ or you want to support me with <a href="https://paypal.me/hotmanjw" target="_bla
     $ npm install
     $ npm start
    ```
+## Tags
+CPanel, Dynamic DNS, DyDNS, CPanel Dynamic DNS, CPANEL DyDNS
